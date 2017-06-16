@@ -29,4 +29,4 @@ stylesheets/
 `-- main.css            # primary file
 ```
 
-*An HTML module can contain multiple partials and is determine whenever is can be reusable or not. Module can be page or a part of it.
+*An HTML module can contain multiple partials and is determine whenever is can be reusable or not. Module can be a page or a part of it.
