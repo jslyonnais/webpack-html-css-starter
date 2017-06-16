@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+/* EXTERNAL VENDORS */
+@import url(https://fonts.googleapis.com/css?family=Lora:400);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:700);
+
+/* CONFIG */
+@import "config/_reset.pcss";
+@import "config/_variables.pcss";
+@import "config/_base.pcss";
+
+/* PARTIALS */
+@import "partials/_typography.pcss";
+@import "partials/_socials.pcss";
+
+/* MODULES */
+
+/* VENDORS */
