@@ -1,8 +1,8 @@
-const webpack = require('webpack');
-const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const extractStyles = new ExtractTextPlugin('style.min.css');
-const extractHtmls = new ExtractTextPlugin('../index.html');
+const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
 	context: path.resolve(__dirname, 'src'),
@@ -34,18 +34,16 @@ module.exports = {
 			},
 			{
 				test: /\.html$/,
-				use: extractHtmls.extract({
-					use: [
-						{
-							loader: 'html-loader',
-							options: {
-								minimize: true,
-								removeComments: false,
-								collapseWhitespace: false
-							}
+				use: [
+					{
+						loader: 'html-loader',
+						options: {
+							minimize: true,
+							removeComments: false,
+							collapseWhitespace: false
 						}
-					]
-				})
+					}
+				]
 			}
 		]
 	},
@@ -58,6 +56,11 @@ module.exports = {
 	},
 	plugins: [
 		extractStyles,
-		extractHtmls
+		new HtmlWebpackPlugin({
+			filename: '../index.html',
+			hash: true,
+			// favicon: 'favicon.ico',
+			template: 'index.html',
+		}),
 	]
 };
