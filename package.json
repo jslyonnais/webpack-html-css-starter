@@ -1,7 +1,7 @@
 {
-  "name": "marcus-landing-page",
+  "name": "webpack-postcss-starter",
   "version": "1.0.0",
-  "description": "Single landing page for Marcus",
+  "description": "Starter webpack for postcss",
   "main": "App.js",
   "author": "Jean-Simon Lyonnais <iam@jslyonnais.com>",
   "scripts": {
